@@ -8,11 +8,18 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 const addOne = (arr) => {
   // Solution code here...
-  let localArray = [];
-  arr.forEach(element => {
-    localArray.push(element + 1)
-  });
-  return localArray;
+  let newArry = [];
+  arr.forEach(element=>{
+    
+      newArry.push(element+1);
+    
+  })
+  return newArry;
+  // let localArray = [];
+  // arr.forEach(element => {
+  //   localArray.push(element + 1)
+  // });
+  // return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,11 +30,16 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-  let localArray = [];
-  arr.forEach(element => {
-    localArray.push(element + '!' );
-  });
-  return localArray;
+  let newArray =[];
+  arr.forEach(element=>{
+    newArray.push(element+'!')
+  })
+  return newArray;
+  // let localArray = [];
+  // arr.forEach(element => {
+  //   localArray.push(element + '!' );
+  // });
+  // return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,11 +50,16 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  let localArray = [];
-  arr.forEach(element => {
-    localArray.push(element.toUpperCase());
-  });
-  return localArray;
+  let newArray =[];
+  arr.forEach(element=>{
+    newArray.push(element.toUpperCase()) ;
+  })
+  return newArray;
+  // let localArray = [];
+  // arr.forEach(element => {
+  //   localArray.push(element.toUpperCase());
+  // });
+  // return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,6 +77,11 @@ const greeting = (word) => {
 };
 
 const speaker = (words, callback) => {
+    // let newArray =[];
+    // words.forEach(element=>{
+    //   newArray.push(callback(words));
+    // })
+    // return newArray;
   // Solution code here...
   let arrayOfstring = [];
   words.forEach((items , index ) => {
@@ -87,10 +109,14 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  for (let y = 0 ; y < times ; y++){
-    callback (arr , num);
+  for(let i = 0 ; i<times; i++){
+    callback(arr,num);
   }
   return arr;
+  // for (let y = 0 ; y < times ; y++){
+  //   callback (arr , num);
+  // }
+  // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,14 +135,22 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-  let myShoppingList = [];
-  availableItems.forEach((item , place) => {
-    if (availableItems[place].available === true){
-      myShoppingList.push(availableItems[place].name);
+  let mylist  =[];
+  availableItems.forEach((element,index)=>{
+    if (element.available === true )
+    {
+      mylist.push(element.name);
     }
+  })
+  return mylist;
+  // let myShoppingList = [];
+  // availableItems.forEach((item , place) => {
+  //   if (availableItems[place].available === true){
+  //     myShoppingList.push(availableItems[place].name);
+  //   }
 
-  });
-  return myShoppingList; 
+  // });
+  // return myShoppingList; 
 };
 
 // another way to solve it 
@@ -145,20 +179,35 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-  let outPutArray = [];
-  arr.forEach(item=>{
-    if (item % 3 === 0 && item % 5 === 0 ) {
-      outPutArray.push("Fizz Buzz");
-    }
-    else if (item % 5 === 0) {
-      outputArr.push("Buzz");
-    } else if (item % 3 === 0) {
-      outputArr.push("Fizz");
-    } else {
-      outputArr.push(item);
+  let newArray =[];
+  arr.forEach(element=>{
+    if(element %3 ===0 && element%5 ===0 ){
+      newArray.push('Fizz Buzz');
+    }else if (element % 5===0 ){
+      newArray.push('Buzz');
+    
+    } else if (element % 3=== 0){
+      newArray.push('Fizz');
+
+    }else{
+      newArray.push(element);
     }
   })
-  return outPutArray;
+return newArray;
+  // let outPutArray = [];
+  // arr.forEach(item=>{
+  //   if (item % 3 === 0 && item % 5 === 0 ) {
+  //     outPutArray.push("Fizz Buzz");
+  //   }
+  //   else if (item % 5 === 0) {
+  //     outputArr.push("Buzz");
+  //   } else if (item % 3 === 0) {
+  //     outputArr.push("Fizz");
+  //   } else {
+  //     outputArr.push(item);
+  //   }
+  // })
+  // return outPutArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -208,7 +257,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
