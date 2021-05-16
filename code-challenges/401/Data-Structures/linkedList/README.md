@@ -19,5 +19,4 @@
 * Append .
 * insertBefore .
 * insertAfter .
-* kthFromEnd .
 

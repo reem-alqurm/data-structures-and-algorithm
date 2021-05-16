@@ -123,5 +123,18 @@ describe('testing functionality of linked list ', () => {
 
     expect(list.head.next.next.next.value).toEqual(4);
   });
-
+  test('should insert a node before a node located i the middle of a linked list', ()=>{
+    let ll = new linkedList.list();
+    let firstValue = 3;
+    let secondValue = 2;
+    let thirdValue = 1;
+    let value= 5;
+   
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    ll.insertBefore(secondValue, value)
+   
+    expect(ll.head.next.value).toEqual(value);
+})
 });
