@@ -97,6 +97,31 @@ class LinkedList {
     return string;
   }
 
+
+kthFromEnd(k) {
+  //need count of how many nodes are in linked list to know where end is
+
+  if (this.head === null || k < 1) {
+    return null;
+  }
+
+  let pointerOne = this.head;
+  let pointerTwo = this.head;
+
+  for(let i = 0; i < k - 1; i++) {
+    if (pointerTwo === null) {
+      return null;
+    }
+    pointerTwo = pointerTwo.next;
+  }
+  while (pointerTwo.next !== null) {
+    pointerOne = pointerOne.next;
+    pointerTwo = pointerTwo.next;
+  }
+  console.log('pointer one', pointerOne, 'pointer two', pointerTwo);
+  return pointerOne.value;
+ 
+}
 }
 
 
@@ -108,7 +133,7 @@ ll.head.next.next = new Node(2);
 ll.head.next.next.next = new Node(3);
 
 // ll.append(4);
-
+ll.kthFromEnd(1);
 ll.toString();
 console.log('this is linked list', ll.toString());
 // ll.includes(3);
