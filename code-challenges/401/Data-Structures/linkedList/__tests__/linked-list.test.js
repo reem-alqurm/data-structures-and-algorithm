@@ -137,4 +137,50 @@ describe('testing functionality of linked list ', () => {
    
     expect(ll.head.next.value).toEqual(value);
 })
+it('to test where k is greater than the length of linked list', () => {
+  const list = new linkedList.list();
+  list.head = new linkedList.node(0);
+  list.head.next = new linkedList.node(1);
+  const test = list.kthFromEnd(5);
+
+  expect(test).toEqual(null);
+});
+
+it('to test where k and the length of the list are the same', () => {
+  const list = new linkedList.list();
+  list.head = new linkedList.node(0);
+  list.head.next = new linkedList.node(1);
+  const test = list.kthFromEnd(2);
+
+  expect(test).toEqual(0);
+
+});
+
+it('to test where k is not a positive integer', () => {
+  const list = new linkedList.list();
+  list.head = new linkedList.node(0);
+  list.head.next = new linkedList.node(1);
+  const test = list.kthFromEnd(5);
+
+  expect(test).toEqual(null);
+});
+
+it('to test a linkedin list of size 1', () => {
+  const list = new linkedList.list();
+  list.head = new linkedList.node(0);
+  const test = list.kthFromEnd(1);
+
+  expect(test).toEqual(0);
+});
+
+it('to test if the value of the node kth from the end where k is in the middle of the list', () => {
+  const list = new linkedList.list();
+  list.head = new linkedList.node(0);
+  list.head.next = new linkedList.node(1);
+  list.head.next.next = new linkedList.node(2);
+  list.head.next.next.next = new linkedList.node(3);
+  const test = list.kthFromEnd(3);
+
+  expect(test).toEqual(1);
+});
 });

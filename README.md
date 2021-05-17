@@ -10,3 +10,4 @@
 - [Whiteboard Challenge 03: Array Binary Search](code-challenges/401/arrayBinarySearch/README.md)
 - [Challenge 05: Singly Linked List](code-challenges/401/Data-Structures/linkedList/README.md)
 - [Challenge 06: Singly Linked List part 2](code-challenges/401/Data-Structures/linkedList/README.md)
+- [Challenge 06: Singly Linked List part 3](code-challenges/401/Data-Structures/linkedList/README.md)
