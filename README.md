@@ -12,4 +12,5 @@
 - [Challenge 06: Singly Linked List part 2](code-challenges/401/Data-Structures/linkedList/README.md)
 - [Challenge 07: Singly Linked List part 3](code-challenges/401/Data-Structures/linkedList/README.md)
 - [Challenge 08: Singly Linked List part 4](code-challenges/401/Data-Structures/llZip/README.md)
-- [Whiteboard Challenge 10: Array Binary Search](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
+- [Whiteboard Challenge 10: stacks And Queues](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
+- [Whiteboard Challenge 11: stacks with Queues](code-challenges/401/Data-Structures/queueWithStacks/README.md)
