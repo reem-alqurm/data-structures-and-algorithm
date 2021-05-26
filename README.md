@@ -15,3 +15,4 @@
 - [Whiteboard Challenge 10: stacks And Queues](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
 - [Whiteboard Challenge 11: stacks with Queues](code-challenges/401/Data-Structures/queueWithStacks/README.md)
 - [Whiteboard Challenge 10: stacks And Queues 2](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
+- [Whiteboard Challenge 12: stacks And Queues 3](code-challenges/401/Data-Structures/multiBracketValidation/README.md)
