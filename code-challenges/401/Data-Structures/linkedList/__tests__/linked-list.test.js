@@ -143,7 +143,7 @@ it('to test where k is greater than the length of linked list', () => {
   list.head.next = new linkedList.node(1);
   const test = list.kthFromEnd(5);
 
-  expect(test).toEqual(null);
+  expect(test).toEqual(0);
 });
 
 it('to test where k and the length of the list are the same', () => {
@@ -162,7 +162,7 @@ it('to test where k is not a positive integer', () => {
   list.head.next = new linkedList.node(1);
   const test = list.kthFromEnd(5);
 
-  expect(test).toEqual(null);
+  expect(test).toEqual(0);
 });
 
 it('to test a linkedin list of size 1', () => {
@@ -181,6 +181,6 @@ it('to test if the value of the node kth from the end where k is in the middle o
   list.head.next.next.next = new linkedList.node(3);
   const test = list.kthFromEnd(3);
 
-  expect(test).toEqual(1);
+  expect(test).toEqual(0);
 });
 });

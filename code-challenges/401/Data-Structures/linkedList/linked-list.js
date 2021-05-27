@@ -98,30 +98,27 @@ class LinkedList {
   }
 
 
-kthFromEnd(k) {
+
   //need count of how many nodes are in linked list to know where end is
 
-  if (this.head === null || k < 1) {
-    return null;
-  }
-
-  let pointerOne = this.head;
-  let pointerTwo = this.head;
-
-  for(let i = 0; i < k - 1; i++) {
-    if (pointerTwo === null) {
-      return null;
+     kthFromEnd(k) {
+        if (this.head == null) {
+            return null;
+        } else if (k > this.length || k < 0) {
+            return 'Exception';
+        }
+        else if (this.length == k) {
+            return this.head.value;
+        }
+        else {
+            let nodeOrder = this.length - k - 1;
+            let current = this.head;
+            for (let i = 0; i <= nodeOrder; i++) {
+                current = current.next;
+            }
+       return current.value;
+        }
     }
-    pointerTwo = pointerTwo.next;
-  }
-  while (pointerTwo.next !== null) {
-    pointerOne = pointerOne.next;
-    pointerTwo = pointerTwo.next;
-  }
-  console.log('pointer one', pointerOne, 'pointer two', pointerTwo);
-  return pointerOne.value;
- 
-}
 }
 
 
