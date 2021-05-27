@@ -18,4 +18,4 @@
 
 ## White Board :
  
-![image](Whiteboard-5_23_2021,2_39_02PM.png)
+![image](./Whiteboard-5_27_2021,12_57_44AM.png)
