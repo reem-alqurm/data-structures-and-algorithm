@@ -13,4 +13,4 @@
   
   # whitebored
 
-  <img src = "Whiteboard-5_24_2021,5_51_37PM.png">
+  <img src = "./Whiteboard-5_28_2021,1_35_44PM.png">

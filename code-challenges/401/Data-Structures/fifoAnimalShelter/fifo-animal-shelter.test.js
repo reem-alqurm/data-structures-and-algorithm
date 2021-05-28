@@ -14,7 +14,7 @@ describe('test animals in the shelter', () => {
     animal.enqueue({type: 'cat', name: 'Boots', age: 'Kitten'});
     animal.enqueue({type: 'dog', name: 'Tanya', age: 'Adult'});
     animal.dequeue('dog');
-    expect(animal.dog.stackTwo.storage).toEqual([{type: 'dog', name: 'Tanya', age: 'Adult'}])
-});
+    expect(animal.dequeue('dog')).toEqual({type: 'dog', name: 'Tanya', age: 'Adult'}) 
+  });
 
 });
