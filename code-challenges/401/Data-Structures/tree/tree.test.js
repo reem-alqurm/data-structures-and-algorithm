@@ -75,6 +75,12 @@ describe('testing functionality of binary trees and binary search trees', () => 
 
     expect(testValue).toEqual(false);
   });
-
+it('should successfully return the maximum ', () => {
+  const test = new trees.BinaryTree();
+    test.root = new trees.node(88);
+    test.root.left = new trees.node(2);
+    test.root.right = new trees.node(9);
+      expect(test.findMaximumValue()).toEqual(88)
+  });
   
 });
