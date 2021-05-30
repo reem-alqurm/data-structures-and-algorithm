@@ -43,6 +43,27 @@ class Node {
         traverse(this.root);
         return results;
     }
+    findMaximumValue() {
+      
+      let max = 0;
+      const results = [];
+      const trav = (node) => {
+          if (node.left) 
+          {trav(node.left);}
+          if (node.right)
+          {trav(node.right);} 
+          
+          results.push(node.value);
+      };
+      trav(this.root);
+      for (let i = 0; i < results.length; i++) {
+          if (max < results[i]) {
+              max = results[i];
+          }
+      }
+      return max;
+  
+}
 }
   class BinarySearchTree {
     constructor() {
@@ -94,6 +115,7 @@ class Node {
       }
       return false;
     }
+
   }
   
 //   const binaryTree = new BinarySearchTree();
