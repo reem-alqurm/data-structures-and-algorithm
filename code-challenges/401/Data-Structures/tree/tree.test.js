@@ -82,5 +82,16 @@ it('should successfully return the maximum ', () => {
     test.root.right = new trees.node(9);
       expect(test.findMaximumValue()).toEqual(88)
   });
+
+  it('should successfully return the Breadth first ', () => {
+    const test = new trees.BinaryTree();
+      test.root = new trees.node(88);
+      test.root.left = new trees.node(2);
+      test.root.right = new trees.node(4);
+      test.root.right.right = new trees.node(6);
+      test.root.right.right.left = new trees.node(77);
+
+      expect(test.breadthFirst()).toEqual([88,2,4,6,77])
+    });
   
 });

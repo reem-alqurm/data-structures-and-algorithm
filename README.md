@@ -14,5 +14,9 @@
 - [Challenge 08: Singly Linked List part 4](code-challenges/401/Data-Structures/llZip/README.md)
 - [Whiteboard Challenge 10: stacks And Queues](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
 - [Whiteboard Challenge 11: stacks with Queues](code-challenges/401/Data-Structures/queueWithStacks/README.md)
-- [Whiteboard Challenge 10: stacks And Queues 2](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
-- [Whiteboard Challenge 12: stacks And Queues 3](code-challenges/401/Data-Structures/multiBracketValidation/README.md)
+- [Whiteboard Challenge 12: stacks And Queues 2](code-challenges/401/Data-Structures/stacksAndQueues/README.md)
+- [Whiteboard Challenge 13: stacks And Queues 3](code-challenges/401/Data-Structures/multiBracketValidation/README.md)
+
+- [Whiteboard Challenge 15: Tree 1](code-challenges/401/Data-Structures/tree/README.md)
+- [Whiteboard Challenge 16: Tree 2](code-challenges/401/Data-Structures/tree/README.md)
+- [Whiteboard Challenge 17: Tree 3](code-challenges/401/Data-Structures/tree/README.md)

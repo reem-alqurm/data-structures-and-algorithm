@@ -64,7 +64,30 @@ class Node {
       return max;
   
 }
-}
+breadthFirst() {
+  
+      const newResult = [];
+      const roots = [];
+      if (this.root == null) {
+          return 'Error The Tree is empty'
+      } else {
+          roots.push(this.root);
+          while (roots.length) {
+              const node = roots.shift();
+              if (node.left) {
+                  roots.push(node.left);
+              }
+              if (node.right) {
+                 roots.push(node.right);
+              }
+              newResult.push(node.value);
+          }
+      }
+      return newResult;
+  
+ 
+}}
+
   class BinarySearchTree {
     constructor() {
       this.root = null;
