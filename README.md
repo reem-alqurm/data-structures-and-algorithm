@@ -20,3 +20,4 @@
 - [Whiteboard Challenge 15: Tree 1](code-challenges/401/Data-Structures/tree/README.md)
 - [Whiteboard Challenge 16: Tree 2](code-challenges/401/Data-Structures/tree/README.md)
 - [Whiteboard Challenge 17: Tree 3](code-challenges/401/Data-Structures/tree/README.md)
+- [Whiteboard Challenge 18: Tree 4](code-challenges/401/Data-Structures/fizzBuzzTree/README.md)
