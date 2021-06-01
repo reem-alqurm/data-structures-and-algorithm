@@ -1,4 +1,4 @@
-# Multi Bracket Validation
+# Trees
 
 * Binary tree and binary search tree methods and implementation.
 # Challenge
