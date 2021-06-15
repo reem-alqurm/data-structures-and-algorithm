@@ -7,7 +7,8 @@
  * Present a complete set of working tests.
 
 # Approach & Efficiency
- * go through the algorithm step by step visually and then using the provided pseudocode to implement working codeز
+ * go through the algorithm step by step visually and then using the provided pseudocode to implement working code.
+ 
 # Big O
  * O(n * log n) time .
  * O(log n) space.
