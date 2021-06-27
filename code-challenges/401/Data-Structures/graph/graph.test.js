@@ -115,6 +115,96 @@ describe('Testing graph methods', () => {
 
     expect(testValue).not.toBeUndefined();
   });
+  it('Should properly traverse a graph breadth first', () => {
+    let test = new graph.Graph();
+    const pandora = new graph.Vertex('Pandora');
+    const arendelle = new graph.Vertex('Arendelle');
+    const metroville = new graph.Vertex('Metroville');
+    const monstroplolis = new graph.Vertex('Monstroplolis');
+    const narnia = new graph.Vertex('Narnia');
+    const naboo = new graph.Vertex('Naboo');
+    test.addVertex(pandora);
+    test.addVertex(arendelle);
+    test.addVertex(metroville);
+    test.addVertex(monstroplolis);
+    test.addVertex(narnia);
+    test.addVertex(naboo);
+    test.addEdge(pandora, arendelle);
+    test.addEdge(arendelle, metroville);
+    test.addEdge(arendelle, monstroplolis);
+    test.addEdge(metroville, monstroplolis);
+    test.addEdge(metroville, narnia);
+    test.addEdge(metroville, naboo);
+    test.addEdge(monstroplolis, naboo);
+    test.addEdge(narnia, naboo);
+
+    let testValue = test.breadthFirst(pandora);  
+    // console.log(testValue.has(pandora));
+
+    expect(testValue.has(pandora)).toBeTruthy();
+    expect(testValue.has(arendelle)).toBeTruthy();
+    expect(testValue.has(metroville)).toBeTruthy();
+  });
+
+  it('Should properly traverse a graph breadth first and return the number of vertices', () => {
+    let test = new graph.Graph();
+    const pandora = new graph.Vertex('Pandora');
+    const arendelle = new graph.Vertex('Arendelle');
+    const metroville = new graph.Vertex('Metroville');
+    const monstroplolis = new graph.Vertex('Monstroplolis');
+    const narnia = new graph.Vertex('Narnia');
+    const naboo = new graph.Vertex('Naboo');
+    test.addVertex(pandora);
+    test.addVertex(arendelle);
+    test.addVertex(metroville);
+    test.addVertex(monstroplolis);
+    test.addVertex(narnia);
+    test.addVertex(naboo);
+    test.addEdge(pandora, arendelle);
+    test.addEdge(arendelle, metroville);
+    test.addEdge(arendelle, monstroplolis);
+    test.addEdge(metroville, monstroplolis);
+    test.addEdge(metroville, narnia);
+    test.addEdge(metroville, naboo);
+    test.addEdge(monstroplolis, naboo);
+    test.addEdge(narnia, naboo);
+
+    let testValue = test.breadthFirst(pandora);  
+    // console.log(testValue.has(pandora));
+
+    expect(testValue.size).toEqual(6);
+  });
+
+  it('Should properly traverse a graph breadth first', () => {
+    let test = new graph.Graph();
+    const pandora = new graph.Vertex('Pandora');
+    const arendelle = new graph.Vertex('Arendelle');
+    const metroville = new graph.Vertex('Metroville');
+    const monstroplolis = new graph.Vertex('Monstroplolis');
+    const narnia = new graph.Vertex('Narnia');
+    const naboo = new graph.Vertex('Naboo');
+    test.addVertex(pandora);
+    test.addVertex(arendelle);
+    test.addVertex(metroville);
+    test.addVertex(monstroplolis);
+    test.addVertex(narnia);
+    test.addVertex(naboo);
+    test.addEdge(pandora, arendelle);
+    test.addEdge(arendelle, metroville);
+    test.addEdge(arendelle, monstroplolis);
+    test.addEdge(metroville, monstroplolis);
+    test.addEdge(metroville, narnia);
+    test.addEdge(metroville, naboo);
+    test.addEdge(monstroplolis, naboo);
+    test.addEdge(narnia, naboo);
+
+    let testValue = test.breadthFirst(pandora);  
+    // console.log(testValue.has(pandora));
+
+    expect(testValue.has(monstroplolis)).toBeTruthy();
+    expect(testValue.has(narnia)).toBeTruthy();
+    expect(testValue.has(naboo)).toBeTruthy();
+  });
 });
 
 

@@ -67,6 +67,31 @@ class Graph {
     }
     return visited.size;
   }
+  breadthFirst(vertex){
+    const queue = []; //order of visited nodes will be FIFO
+    const visited = new Set(); // track visited vertices, Set()this works a lot like a map - throws errors for trying to add duplicates, could use a lot of things here (can do an array, and use array.includes)
+    //this is also helpful if you think your linked list has a cycle
+
+    queue.unshift(vertex);
+    visited.add(vertex);
+
+    while(queue.length) {
+      const currentVertex = queue.pop();
+      const neighbors = this.getNeighbors(currentVertex); //gives an array of all neighbors
+
+      for (let neighbor of neighbors) { // each neighbor is an edge
+        const neighborVertex = neighbor.vertex;
+
+        if (visited.has(neighborVertex)){ //if we have already visited skip
+          continue;
+        } else { // if not add to visited list, and queue it up
+          visited.add(neighborVertex);
+          queue.unshift(neighborVertex);
+        }
+      }
+    }
+    return visited;
+  }
 }
 
 
