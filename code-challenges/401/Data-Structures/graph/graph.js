@@ -92,6 +92,9 @@ class Graph {
     }
     return visited;
   }
+  
+
+
 }
 function businessTrip(graph, cityArray) {
   let totalCost = 0;
@@ -115,7 +118,29 @@ function businessTrip(graph, cityArray) {
   return `${check}, $${totalCost}`;
 }
 
+function depthFirstTraversal (graph, vertex) {
+  // const stack = [];
+  const visitedVertices = new Set();
 
+  // stack.push(vertex);
+  visitedVertices.add(vertex); // this could be a good opportunity for recursion as well
+
+  const traverse = (current, visited) => {
+    
+    visited.add(current);
+    
+    const neighbors = graph.getNeighbors(current);
+
+    for (let neighbor of neighbors) {
+      if(!visited.has(neighbor.vertex)){
+        traverse(neighbor.vertex, visited);
+      }
+    }
+  };
+
+  traverse(vertex, visitedVertices);
+  return visitedVertices;
+}
 
 
 
@@ -150,5 +175,6 @@ module.exports = {
   Vertex,
   Edge,
   Graph,
-  businessTrip
+  businessTrip,
+  depthFirstTraversal
 };
