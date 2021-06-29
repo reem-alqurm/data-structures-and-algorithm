@@ -268,3 +268,74 @@ describe('Testing getEdges function for graphs', () => {
     expect(graph.businessTrip(test, [narnia, arendelle, naboo])).toEqual('false, $0');
   });
 });
+describe('Testing depth first method for graphs traversal', () => {
+
+  it('Should successfully traverse graph depth first', () => {
+    let test = new graph.Graph();
+    const a = new graph.Vertex('A');
+    const b = new graph.Vertex('B');
+    const c = new graph.Vertex('C');
+    const d = new graph.Vertex('D');
+    const e = new graph.Vertex('E');
+    const f = new graph.Vertex('F');
+    const g = new graph.Vertex('G');
+    const h = new graph.Vertex('H');
+    test.addVertex(a);
+    test.addVertex(b);
+    test.addVertex(c);
+    test.addVertex(d);
+    test.addVertex(e);
+    test.addVertex(f);
+    test.addVertex(g);
+    test.addVertex(h);
+    test.addEdge(a, b);
+    test.addEdge(a, d);
+    test.addEdge(b, c);
+    test.addEdge(c, g);
+    test.addEdge(b, d);
+    test.addEdge(d, e);
+    test.addEdge(d, h);
+    test.addEdge(d, f);
+    test.addEdge(h, f);
+    let testValue = graph.depthFirstTraversal(test, a);
+    let arrayValues = Array.from(testValue);
+    // console.log(testValue.has(a));
+    // console.log(Array.from(testValue));
+    // array.from(test[0].value);
+    expect(arrayValues[0].value).toEqual('A');
+    expect(arrayValues[7].value).toEqual('F');
+  });
+
+  it('Should traverse graph depth first and return correct number of vertices', () => {
+    let test = new graph.Graph();
+    const a = new graph.Vertex('A');
+    const b = new graph.Vertex('B');
+    const c = new graph.Vertex('C');
+    const d = new graph.Vertex('D');
+    const e = new graph.Vertex('E');
+    const f = new graph.Vertex('F');
+    const g = new graph.Vertex('G');
+    const h = new graph.Vertex('H');
+    test.addVertex(a);
+    test.addVertex(b);
+    test.addVertex(c);
+    test.addVertex(d);
+    test.addVertex(e);
+    test.addVertex(f);
+    test.addVertex(g);
+    test.addVertex(h);
+    test.addEdge(a, b);
+    test.addEdge(a, d);
+    test.addEdge(b, c);
+    test.addEdge(c, g);
+    test.addEdge(b, d);
+    test.addEdge(d, e);
+    test.addEdge(d, h);
+    test.addEdge(d, f);
+    test.addEdge(h, f);
+    let testValue = graph.depthFirstTraversal(test, a);
+    let arrayValues = Array.from(testValue);
+
+    expect(arrayValues.length).toEqual(8);
+  });
+});
